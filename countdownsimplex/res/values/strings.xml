@@ -1,0 +1,10 @@
+<resources>
+
+    <string name="app_name">countdownsimplex</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="menu_settings">Settings</string>
+    <string name="title_activity_two_play_main">TwoPlayMain</string>
+    <string name="title_activity_score_board">ScoreBoard</string>
+    <string name="title_activity_main">MainActivity</string>
+
+</resources>

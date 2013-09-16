@@ -1,0 +1,227 @@
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical" >
+
+        <ScrollView
+            android:id="@+id/scrollView1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                 android:orientation="vertical">
+        <TextView
+            android:id="@+id/timedis"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="exists??" />
+        
+        
+        <ListView
+             android:id="@+id/listView2"
+             android:layout_width="match_parent"
+             android:layout_height="200dp" >
+         </ListView>
+        
+        
+        <Button
+            android:id="@+id/getgames"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="getgames (no parameters)"
+            android:onClick="getgames" />
+        
+        <EditText
+            android:id="@+id/code"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="game name (type or click above)" />
+        
+        <EditText
+            android:id="@+id/password"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="password" />
+
+        
+
+        <Button
+            android:id="@+id/checkgame"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="checkforgame (needs game name)"
+            android:onClick="checkifgame" />
+
+        <TextView
+            android:id="@+id/exists"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="exists??" />
+        
+        
+        
+         <Button
+            android:id="@+id/create"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="create game (needs game name and password)"
+            android:onClick="creategame" />
+         
+        
+        <EditText
+            android:id="@+id/diffi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="diffi int (0,1,2,3)" />
+        
+        
+        <EditText
+            android:id="@+id/time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="time" />
+        
+         <Button
+            android:id="@+id/newnums"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="new numbers (needs difficulty and time)"
+            android:onClick="newnums" />
+         
+         <Button
+            android:id="@+id/checkpass"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="check your pass to enter game (needs pass and game name)"
+            android:onClick="checkpass"  />
+         
+         <TextView
+            android:id="@+id/ispass"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="yes/no" />
+         
+        <EditText
+            android:id="@+id/name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="player name" />
+        
+         <Button
+            android:id="@+id/newplayer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="new player (needs player name and game code)"
+            android:onClick="newplayer"  />
+         
+         <TextView
+            android:id="@+id/playerid"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Player ID" />
+         
+         <EditText
+            android:id="@+id/id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="player id to delete" />
+         
+           <Button
+            android:id="@+id/delplayer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="delete player (needs player id)"
+            android:onClick="delplayer"  />
+         
+         <Button
+            android:id="@+id/started"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="is Started? (needs game code)"
+            android:onClick="isstarted" />
+
+         
+         
+        <TextView
+            android:id="@+id/starteddisp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="yes/no" />
+        
+        <Button
+            android:id="@+id/start"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="start (needs game code)"
+            android:onClick="start" />
+        
+        <Button
+            android:id="@+id/getnums"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="get numbers (needs game code)"
+            android:onClick="getnums" />
+        
+        
+        <TextView
+            android:id="@+id/nums"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="numbers" />
+        
+        
+        <EditText
+            android:id="@+id/dist"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="distance" />
+        
+        <Button
+            android:id="@+id/postdist"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="post distance (needs player id and distance)"
+            android:onClick="postdist"  />
+        
+        <Button
+            android:id="@+id/getres"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="get results (needs game code)"
+            android:onClick="getres" />
+        
+        <Button
+            android:id="@+id/stopgame"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="stop game (needs game code)"
+            android:onClick="stopgame" />
+        
+         
+        <TextView
+            android:id="@+id/res"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="results" />
+
+        <ListView
+             android:id="@+id/listView1"
+             android:layout_width="match_parent"
+             android:layout_height="300dp" >
+         </ListView>
+        
+        
+            </LinearLayout>
+        </ScrollView>
+
+    </LinearLayout>

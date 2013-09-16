@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+   <LinearLayout 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal" >
+    
+    <EditText
+        android:id="@+id/eturl"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:hint="Type in the URL"
+        android:ems="10" >
+
+    </EditText>
+
+    <Button
+        android:id="@+id/bgo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Go" />
+    </LinearLayout>
+
+
+   <LinearLayout 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal" >
+    <Button
+        android:id="@+id/bback"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Back" />
+
+    <Button
+        android:id="@+id/bforward"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Forward" />
+
+    <Button
+        android:id="@+id/breload"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Reload" />
+
+    <Button
+        android:id="@+id/bhistory"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Clear History" />
+</LinearLayout>
+
+   <WebView
+       android:id="@+id/wv"
+       android:layout_width="match_parent"
+       android:layout_height="match_parent" />
+
+</LinearLayout>

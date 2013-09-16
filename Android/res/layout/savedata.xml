@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <EditText
+        android:id="@+id/e"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:height="100dp" 
+        android:hint="Type a String">
+
+        <requestFocus />
+    </EditText>
+
+    <LinearLayout android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:weightSum="100">
+        
+  
+    
+    <Button
+        android:id="@+id/s"
+        android:layout_width="wrap_content"
+        android:layout_height="150dp"
+        android:text="Save"
+        android:layout_weight="50"
+        android:textSize="30dp" />
+
+    <Button
+        android:id="@+id/l"
+        android:layout_width="wrap_content"
+        android:layout_height="150dp"
+        android:textSize="30dp"
+        android:text="Load"
+        android:layout_weight="50" />
+    
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/t"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="____________"
+        android:layout_gravity="center"
+        android:textSize="40dp" />
+
+</LinearLayout>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="vertical" android:layout_width="match_parent"
+	android:weightSum="100" android:layout_height="match_parent">
+	
+    <LinearLayout android:orientation="vertical"
+		android:layout_width="fill_parent" android:layout_weight="40"
+		android:layout_height="fill_parent">
+		<TextView android:text="Fill in the Details of your email and click send email to create your Fan letter to the J Rod"
+			android:layout_width="fill_parent" 
+			android:layout_height="fill_parent"
+			android:gravity="center"
+			android:textSize="20dp"
+			> </TextView>
+	</LinearLayout>
+    
+    
+	<ScrollView android:layout_weight="18" android:layout_width="fill_parent"
+		android:layout_height="fill_parent">
+		<LinearLayout android:orientation="vertical"
+			android:layout_width="match_parent" android:layout_height="match_parent">
+			<TextView android:text="Email address:"
+				android:layout_width="wrap_content" android:layout_height="wrap_content"></TextView>
+			<EditText android:layout_height="wrap_content"
+				android:layout_width="match_parent" android:id="@+id/etEmails"></EditText>
+			<TextView android:text="Opening Comment:"
+				android:layout_width="wrap_content" android:layout_height="wrap_content"></TextView>
+			<EditText android:layout_height="wrap_content"
+				android:layout_width="match_parent" android:id="@+id/etIntro"></EditText>
+			<TextView android:text="Person's name" android:layout_width="wrap_content"
+				android:layout_height="wrap_content"></TextView>
+			<EditText android:layout_height="wrap_content"
+				android:layout_width="match_parent" android:id="@+id/etName"></EditText>
+			<TextView android:text="Thing that this Person does that is awesome"
+				android:layout_width="wrap_content" android:layout_height="wrap_content"></TextView>
+			<EditText android:layout_height="wrap_content"
+				android:layout_width="match_parent" android:id="@+id/etThings"></EditText>
+			<TextView android:text="What you want to do to this person:"
+				android:layout_width="wrap_content" android:layout_height="wrap_content"></TextView>
+			<EditText android:layout_height="wrap_content"
+				android:layout_width="match_parent" android:id="@+id/etAction"></EditText>
+			<TextView android:text="Final Comment:" android:layout_width="wrap_content"
+				android:layout_height="wrap_content"></TextView>
+			<EditText android:layout_height="wrap_content"
+				android:layout_width="match_parent" android:id="@+id/etOutro"></EditText>
+		</LinearLayout>
+	</ScrollView>
+	<LinearLayout android:orientation="vertical"
+		android:layout_width="fill_parent" android:layout_weight="42"
+		android:layout_height="fill_parent">
+		<Button android:text="Send Email" android:id="@+id/bSentEmail"
+			android:layout_width="fill_parent" android:layout_height="fill_parent"></Button>
+	</LinearLayout>
+</LinearLayout>

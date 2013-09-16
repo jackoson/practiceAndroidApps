@@ -1,0 +1,65 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="#79CDCD">
+
+    <LinearLayout
+        android:id="@+id/linearLayout1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:weightSum="2" >
+
+        <Button
+            android:id="@+id/homeAdd"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Add"
+            android:onClick="sendList"
+            android:background="#FFFFFF" />
+
+        <Button
+            android:id="@+id/homeClear"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Clear"
+            android:onClick="clearLists" 
+            android:background="#FFFFFF" />
+    </LinearLayout>
+            
+    <EditText
+        android:id="@+id/editText1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:background="#FFFFFF"
+        android:hint="Enter Something!"
+        android:inputType="textCapSentences"
+        android:textColor="#000000"
+        android:textSize="18sp" 
+        android:paddingTop="8sp"
+        android:paddingBottom="8sp"
+        android:paddingLeft="5sp"
+        android:paddingRight="5sp"
+        android:singleLine="false"
+        android:maxLines="4">
+       
+    </EditText>
+
+    <ListView
+        android:id="@+id/listview"
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@id/editText1"
+        android:layout_alignLeft="@id/linearLayout1"
+        android:layout_below="@id/linearLayout1"
+        android:dividerHeight="1sp"
+        android:divider="#FFFFFF">
+    </ListView>
+</RelativeLayout>

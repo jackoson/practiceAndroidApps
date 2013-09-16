@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="ClearFlag">00</string>
+    <string name="SetFlag">01</string>
+    <string name="FlagCommand">></string>
+    <string name="Landing">2C</string>
+    <string name="Switch_Pressed">38</string>
+    <string name="ON_Pressed">36</string>
+    <string name="OFF_Pressed">37</string>
+    <string name="MacroCommand">O</string>
+    <string name="DO_Macro">00</string>
+    <string name="Hall">28</string>
+    <string name="DownstairsBathroom">08</string>
+    <string name="Kitchen">22</string>
+    <string name="Toilet">57</string>
+    <string name="UpstairsBathroom">3A</string>
+    <string name="Utilityroom">33</string>
+    <string name="Lounge">1D</string>
+    <string name="BedroomCupboard">1A</string>
+    <string name="BedroomStandingLamp">30</string>
+    <string name="UpstairsBathroomMirror">3D</string>
+    
+</resources>

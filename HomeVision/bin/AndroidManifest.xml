@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.tygarwen.homevision"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk android:minSdkVersion="10" />
+    <uses-permission android:name="android.permission.INTERNET"/>
+
+    <application
+        android:icon="@drawable/icon"
+        android:label="@string/app_name" >
+        
+        <activity
+            android:name=".RoomMenu"
+            android:label="@string/app_name" >
+        </activity>
+        
+        <activity
+            android:name=".BaseMenu"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+                <category android:name="android.intent.category.DESK_DOCK" />
+                <category android:name="android.intent.category.CAR_DOCK" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.HE_DESK_DOCK" />
+            </intent-filter>
+        </activity>
+        
+        <activity
+            android:name=".HomeVisionActivity"
+            android:label="@string/app_name" >
+        </activity>
+        
+         <activity
+            android:name=".Hall"
+            android:label="@string/app_name" >
+         </activity>
+        
+        
+        <activity
+            android:name=".Landing"
+            android:label="@string/app_name" >
+        </activity>
+        
+        <activity
+            android:name=".LandingTest"
+            android:label="@string/app_name" >
+        </activity>
+        
+        
+        <activity
+            android:name=".Inside"
+            android:label="@string/app_name" >
+        </activity>
+        
+        <activity
+            android:name=".Lights"
+            android:label="@string/app_name" >
+        </activity>
+        
+    </application>
+
+</manifest>

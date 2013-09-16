@@ -1,0 +1,6 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/menu_settings"
+        android:title="@string/menu_settings"
+        android:orderInCategory="100" />
+    <item android:id="@+id/item1" android:title="ejhgsoed" android:numericShortcut="1" android:alphabeticShortcut="a" android:checkable="true" android:visible="true" android:checked="true"></item>
+</menu>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    
+<TextView 
+    android:text="This App was made by Sam :-) to give people an insight in to people like no eyebrhhmhm i mean Rackham and The J Rod Himslef elClarko!!!"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:textSize="30dp"
+    android:gravity="center"
+    />
+</LinearLayout>

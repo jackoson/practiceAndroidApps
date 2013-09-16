@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Jumper Count is 0"
+        android:textSize="35dp"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:id="@+id/tvDisplay"
+        />
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="20dp"
+        android:text=""
+        android:textSize="35dp"
+        android:layout_gravity="center"
+        android:gravity="center"
+        />
+   
+    <Button
+        android:layout_width="250dp"
+        android:layout_height="220dp"
+   		android:text="Jumper Wearing Rackham spotted"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:textSize="40dp"
+        android:id="@+id/addone" />
+        
+      <Button
+        android:layout_width="250dp"
+        android:layout_height="120dp"
+        android:text="reset"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:textSize="50dp"
+        android:id="@+id/minusone" />
+        
+        <Button
+        android:layout_width="250dp"
+        android:layout_height="70dp"
+        android:text="Back"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:textSize="30dp"
+        android:id="@+id/back" />
+        
+
+</LinearLayout>

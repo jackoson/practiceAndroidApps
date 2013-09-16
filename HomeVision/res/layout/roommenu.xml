@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    
+    <ScrollView 
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    
+        >
+        
+        <LinearLayout android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_weight="90">
+
+    <Button
+        android:id="@+id/Hall"
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:text="Hall"
+        android:layout_weight="30"
+        android:textSize="50dp"
+       
+         />
+
+    <Button
+   
+        android:id="@+id/Landing"
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:text="Landing" 
+        android:layout_weight="30"
+        android:textSize="50dp"
+       
+        />
+    
+    <Button
+       android:id="@+id/Kitchen"
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:text="Kitchen"
+        android:layout_weight="30"
+        android:textSize="50dp"
+        
+         />
+    
+    <Button
+       android:id="@+id/Lounge"
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:text="Lounge"
+        android:layout_weight="30"
+        android:textSize="50dp"
+        
+         />
+    
+    <Button
+       android:id="@+id/Bathroom"
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:text="Bathroom"
+        android:layout_weight="30"
+        android:textSize="50dp"
+        
+         />
+    
+     <Button
+       android:id="@+id/UpstairsBathroom"
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:text="Upstairs Bathroom"
+        android:layout_weight="30"
+        android:textSize="50dp"
+        
+         />
+     
+      <Button
+       android:id="@+id/Bedroom"
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:text="Bedroom"
+        android:layout_weight="30"
+        android:textSize="50dp"
+        
+         />
+    
+    </LinearLayout>
+    </ScrollView>
+</LinearLayout>
+
+

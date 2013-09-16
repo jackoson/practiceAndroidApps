@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    
+    
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Click to sound..."
+        android:textSize="20dp"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:padding="10dp"
+            
+        />
+    
+    
+    <LinearLayout 
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal" 
+    android:weightSum="100">
+    
+   <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="F****"
+        android:textSize="30dp"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:id="@+id/f"
+        android:height="100dp"
+        android:layout_weight="50"
+        
+        />
+   
+   
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+   		android:text="Get Off"
+        android:textSize="30dp"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:id="@+id/get"
+        android:height="100dp"
+        android:layout_weight="50"
+        />
+    
+    </LinearLayout>
+    
+    <LinearLayout 
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal" 
+    android:weightSum="100">
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+   		android:text="Oh God 1"
+       android:textSize="30dp"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:id="@+id/ohga"
+        android:height="100dp"
+        android:layout_weight="50"
+        />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+   		android:text="Oh God 2"
+       android:textSize="30dp"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:id="@+id/ohgb"
+       android:height="100dp"
+        android:layout_weight="50"
+        />
+    </LinearLayout>
+    <LinearLayout 
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal" 
+    android:weightSum="100">
+    
+        
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+   		android:text="Woow!"
+        android:textSize="30dp"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:id="@+id/woow"
+        android:height="100dp"
+        android:layout_weight="50"
+        />
+    <Button
+       	android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+   		android:text="YA"
+       android:textSize="30dp"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:id="@+id/ya"
+        android:height="100dp"
+        android:layout_weight="50"
+        />
+    </LinearLayout>
+    
+    <LinearLayout 
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal" 
+    android:weightSum="100">
+    
+    
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+   		android:text="OHH"
+       android:textSize="30dp"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:id="@+id/ohh"
+        android:height="100dp"
+        android:layout_weight="50"
+        />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+   		android:text="Back"
+       android:textSize="30dp"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:id="@+id/back"
+        android:height="100dp"
+        android:layout_weight="50"
+        />
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" >
+    
+    <EditTextPreference
+    android:title="How Many Times Has he Worn a jumper?"
+    android:key="jumpernum"
+    android:defaultValue="0"
+    android:summary="Enter the Digit"/>
+    <CheckBoxPreference android:title="Music" android:key="cb" android:defaultValue="true" android:summary="For the Splash Screen"/>
+    
+    
+</PreferenceScreen>

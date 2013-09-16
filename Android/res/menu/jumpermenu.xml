@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+    <menu xmlns:android="http://schemas.android.com/apk/res/android">
+        <item
+        android:title="Jumper Black"
+        android:id="@+id/black">
+    </item>
+    
+    <item
+        android:title="Jumper Blue"
+        android:id="@+id/blue">
+    </item>
+    
+    <item
+        android:title="Jumper pink"
+        android:id="@+id/pink">
+    </item>
+    
+    <item
+        android:title="Sunglasses"
+        android:id="@+id/glass">
+    </item>
+    
+    <item
+        android:title="eyebrows 1"
+        android:id="@+id/eone">
+    </item>
+    
+    <item
+        android:title="eyebrows 2"
+        android:id="@+id/etwo">
+    </item>
+    
+    
+    
+    </menu>
+    

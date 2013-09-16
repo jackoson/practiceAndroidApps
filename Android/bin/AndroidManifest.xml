@@ -1,0 +1,300 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="Newport.test.Nellie"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk android:minSdkVersion="10" />
+    <uses-permission android:name="android.permission.SET_WALLPAPER"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+
+    <application
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name" >
+        
+        
+        <activity
+            android:name=".Splash"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        
+        <activity
+            android:name=".StopWatch"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.STOPWATCH" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        
+         <activity
+            android:name=".Scribbler"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.SCRIBBLER" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        
+         <activity
+            android:name=".Stream"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.STREAM" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        
+         <activity
+            android:name=".WebBrowser"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.WEBBROWSER" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        
+         <activity
+            android:name=".GFXSurface"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.GFXSURFACE" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        
+         <activity
+            android:name=".StartingPoint"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="Newport.test.Nellie.STARTINGPOINT" />
+
+                <category android:name="android.intent.category.DEFAULT" />"
+            </intent-filter>
+        </activity>
+        
+         <activity
+            android:name=".FanCam"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="Newport.test.Nellie.FANCAM" />
+
+                <category android:name="android.intent.category.DEFAULT" />"
+            </intent-filter>
+        </activity>
+         
+          <activity
+            android:name=".ToContinue"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="Newport.test.Nellie.TOCONTINUE" />
+
+                <category android:name="android.intent.category.DEFAULT" />"
+            </intent-filter>
+        </activity>
+         
+          <activity
+            android:name=".Email"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="Newport.test.Nellie.EMAIL" />
+
+                <category android:name="android.intent.category.DEFAULT" />"
+            </intent-filter>
+        </activity>
+        
+           <activity
+            android:name=".Menu"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="Newport.test.Nellie.MENU" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        
+           <activity
+            android:name=".Prefs"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="Newport.test.Nellie.PREFS" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+           
+           <activity
+            android:name=".Gallery"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="Newport.test.Nellie.GALLERY" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        
+           <activity
+            android:name=".one"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="Newport.test.Nellie.ONE" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        
+           <activity
+            android:name=".B"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="Newport.test.Nellie.B" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        
+           <activity
+            android:name=".C"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="Newport.test.Nellie.C" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+           
+           <activity
+            android:name=".D"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="Newport.test.Nellie.D" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+           
+           <activity
+            android:name=".E"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="Newport.test.Nellie.E" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        
+           <activity
+            android:name=".F"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="Newport.test.Nellie.F" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        
+           <activity
+            android:name=".G"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="Newport.test.Nellie.G" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        
+           <activity
+            android:name=".test"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="Newport.test.Nellie.TEST" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+           
+           <activity
+            android:name=".H"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="Newport.test.Nellie.H" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        
+           <activity
+            android:name=".FindtheJumper"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="Newport.test.Nellie.FINDTHEJUMPER" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        
+           <activity
+            android:name=".FindtheJumpersplash"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="Newport.test.Nellie.FINDTHEJUMPERSPLASH" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        
+            <activity
+            android:name=".What"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="Newport.test.Nellie.WHAT" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+           
+             <activity
+            android:name=".Unlucky"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="Newport.test.Nellie.UNLUCKY" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        
+             <activity
+            android:name=".Sound"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="Newport.test.Nellie.SOUND" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        
+              <activity
+            android:name=".AboutUs"
+            android:label="@string/app_name" 
+            android:theme="@android:style/Theme.Dialog"
+            >
+            <intent-filter>
+                <action android:name="Newport.test.Nellie.ABOUTUS" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+            
+    </application>
+
+</manifest>
