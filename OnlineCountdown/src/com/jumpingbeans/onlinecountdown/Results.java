@@ -26,6 +26,7 @@ import android.annotation.TargetApi;
 import android.app.Activity;
 import android.app.ProgressDialog;
 import android.content.Intent;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -189,7 +190,7 @@ ProgressDialog dialog;
 			
 			message.setText(print);
 			
-			
+			Log.i("test", "marker");
 			al.clear();
 			for(int player = 0; player<results.length;player++){
 				
