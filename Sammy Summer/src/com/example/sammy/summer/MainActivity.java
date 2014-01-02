@@ -25,6 +25,7 @@ import android.widget.AdapterView.OnItemSelectedListener;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
+import android.widget.TableLayout.LayoutParams;
 import android.widget.TextView;
 import android.widget.Toast;
 import android.widget.ToggleButton;
@@ -320,6 +321,8 @@ public class MainActivity extends Activity implements OnClickListener, OnItemSel
 			} catch (ClassNotFoundException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
+			}finally{
+				finish();
 			}
 			break;
 			
@@ -341,6 +344,7 @@ public class MainActivity extends Activity implements OnClickListener, OnItemSel
 		case R.id.bn:
 			
 			
+
 			
 			
 			if(Equation.length()<1){
@@ -357,6 +361,8 @@ public class MainActivity extends Activity implements OnClickListener, OnItemSel
 					Log.i("d", Double.toString(answer));
 					temp = temp.concat("\ngives "+Double.toString(answer));
 					output.setText(temp);
+					
+					output.setLayoutParams(new LayoutParams(LayoutParams.FILL_PARENT, LayoutParams.WRAP_CONTENT));
 				}else{
 					input.setHint("Type Lower Limit");
 				}
@@ -370,6 +376,7 @@ public class MainActivity extends Activity implements OnClickListener, OnItemSel
 				
 				temp = temp.concat("\nfrom "+inputString);
 				output.setText(temp);
+				
 				input.setHint("Type Upper Limit");
 			}else if (uplim == -1543 && position != 2){
 				
@@ -383,6 +390,7 @@ public class MainActivity extends Activity implements OnClickListener, OnItemSel
 				temp = temp.concat("\nto "+inputString);
 				temp = temp.concat("\n to give "+Double.toString(answer));
 				output.setText(temp);
+				output.setLayoutParams(new LayoutParams(LayoutParams.FILL_PARENT, LayoutParams.WRAP_CONTENT));
 			}else{
 				output.setText("");
 				input.setText("");

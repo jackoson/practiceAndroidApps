@@ -11,6 +11,6 @@
     <string name="title_activity_play_screen">PlayScreen</string>
     <string name="title_activity_start">Start</string>
     <string name="title_activity_results">Results</string>
-    <string name="BaseAddress">http://192.168.1.127/Countdown/</string>
+    <string name="BaseAddress">http://www.jumpingbeans.webege.com/Countdown/</string>
 
 </resources>

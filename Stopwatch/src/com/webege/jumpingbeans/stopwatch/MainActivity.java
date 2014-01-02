@@ -1,36 +1,35 @@
 package com.webege.jumpingbeans.stopwatch;
 
 
+import java.util.ArrayList;
+
+
 import android.os.Bundle;
 import android.os.Handler;
 import android.preference.PreferenceManager;
 import android.app.Activity;
 import android.content.SharedPreferences;
-import android.view.Menu;
-import android.view.MenuItem;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
-import android.widget.TableLayout;
-import android.widget.TableRow;
+import android.widget.ListView;
+
 import android.widget.TextView;
-import android.widget.TableRow.LayoutParams;
-import android.support.v4.app.NavUtils;
+
 
 public class MainActivity extends Activity implements android.view.View.OnClickListener {
 
 	public static TextView time;
-	TextView lap1;
 	Button start;
 	Button stop;
 	Button lap;
-	TableLayout table;
+	ListView lapsAndSplits;
+	MyAdapter aa;
+	ArrayList splits;
 	static long starttime = 0;
-	static long stoptime;
-	static long totaltime;
-	static int seconds;
-	static int minutes;
-	static int milliseconds;
-	static int hours;
+	static long stoptime = 0;
+	static long lastLap = 0;
+	
 	SharedPreferences getPrefs;
 	long counters;
 	private Handler mHandler = new Handler();
@@ -41,49 +40,38 @@ public class MainActivity extends Activity implements android.view.View.OnClickL
 		// TODO Auto-generated method stub
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
+		Log.i("TAG", "start");
 		setup();
+		
 	}
 
 	private void setup() {
-		// TODO Auto-generated method stub
-		 time  = (TextView) findViewById(R.id.time);
+		// conect xml layout to code
+		time  = (TextView) findViewById(R.id.time);
 		start = (Button) findViewById(R.id.button1);
 		stop = (Button) findViewById(R.id.button2);
-		lap = (Button) findViewById(R.id.button3);
-		table = (TableLayout) findViewById(R.id.table);
-
+		lap = (Button) findViewById(R.id.split);
+		lapsAndSplits = (ListView) findViewById(R.id.listView1);
+		
+		//title
+		View header = (View)getLayoutInflater().inflate(R.layout.headrow, null);
+		lapsAndSplits.addHeaderView(header);
+		
+		splits = new ArrayList<LapsAndSplits>();
+		aa = new MyAdapter(this,R.layout.tablerow,splits);
+		lapsAndSplits.setAdapter(aa);
+		
+		//call listeners for buttons
 		start.setOnClickListener(this);
 		stop.setOnClickListener(this);
 		lap.setOnClickListener(this);
 		
+		//get running time, even if program was stopped
 		getPrefs =PreferenceManager.getDefaultSharedPreferences(getBaseContext());
-	       
-        starttime = getPrefs.getLong("jtime", 0);
+	    lastLap = starttime = getPrefs.getLong("jtime", 0);
         
-        if(starttime==0){
-        
-        if(starttime != 0){
-			stoptime = System.currentTimeMillis();
-			totaltime = stoptime - starttime;
-			milliseconds = (int) totaltime % 1000;
-			milliseconds = milliseconds/10;
-			seconds = (int) totaltime/1000;
-			minutes = seconds/60;
-			seconds = seconds % 60;
-			hours = minutes/60;
-			minutes = minutes%60;
-			time.setTextSize((float) 50d);
-			if(minutes<1){
-				time.setText(String.format("%02d:%d", seconds,milliseconds));
-			}else{
-			if(hours<1){
-			time.setText(String.format("%d:%02d:%d", minutes,seconds,milliseconds));
-			}else{
-				time.setText(String.format("%d:%d:%02d:%d", hours, minutes,seconds,milliseconds));
-			}
-			}
-        }
-        }else{
+        if(starttime!=0){
+        	Log.i("TAG", " on create call runnable");
         	mHandler.removeCallbacks(startTimer);
 	        mHandler.postDelayed(startTimer, 0);
         }
@@ -91,67 +79,58 @@ public class MainActivity extends Activity implements android.view.View.OnClickL
 	}
 
 	public void onClick(View arg0) {
-		// TODO Auto-generated method stub
+		
 		switch(arg0.getId()){
+		//start button
 		case R.id.button1:
+			//set start time from current time
 			starttime = System.currentTimeMillis();
+			//store value as lest lap
+			lastLap = starttime;
+			//set up display
 			time.setTextSize((float) 50d);
 			time.setText("00:00:00");
-			table.removeAllViews();
+			//remove old split times 
+			splits.clear();
+			aa.notifyDataSetChanged();
+			//write start time to file in case program is closed
 			SharedPreferences.Editor prefEditor = getPrefs.edit();
-			
 			prefEditor.putLong("jtime", starttime);  
 			prefEditor.commit(); 
 			
-			//new updateClock().execute(starttime);
 			
+			Log.i("TAG", "on start call runnable");
+			//cancel all running clocks and start new
 			mHandler.removeCallbacks(startTimer);
 	        mHandler.postDelayed(startTimer, 0);
 	        
-	        
-			
 			break;
+			
+		//stop	
 		case R.id.button2:
+			//if haven't started yet
 			if(starttime != 0){
-			stoptime = System.currentTimeMillis();
-			totaltime = stoptime - starttime;
-			milliseconds = (int) totaltime % 1000;
-			milliseconds = milliseconds/10;
-			seconds = (int) totaltime/1000;
-			minutes = seconds/60;
-			seconds = seconds % 60;
-			hours = minutes/60;
-			minutes = minutes%60;
-			time.setTextSize((float) 50d);
-			if(minutes<1){
-				time.setText(String.format("%02d.%d", seconds,milliseconds));
-			}else{
-			if(hours<1){
-			time.setText(String.format("%d:%02d.%d", minutes,seconds,milliseconds));
-			}else{
-				time.setText(String.format("%d:%d:%02d.%d", hours, minutes,seconds,milliseconds));
-			}
-			}
+			
+				
+			//stop all running clocks
+			mHandler.removeCallbacks(startTimer);	
+			updateDisplay();	
+			
+			//reset program values
 			starttime = 0;
-			
 			SharedPreferences.Editor prefEditor1 = getPrefs.edit();
-			
-			prefEditor1.putLong("jtime", starttime);  
+			prefEditor1.putLong("jtime", 0);  
 			prefEditor1.commit(); 
-			
-			mHandler.removeCallbacks(startTimer);
-			
-		}
-			
-			else {
+		}else {
 				time.setTextSize((float) 20d);
 				time.setText("You haven't presses Start");
 			}
 			
 			break;
-		case R.id.button3:
+			//lap/split button
+		case R.id.split:
 			if(starttime != 0){
-				laptime();
+				newLaptime();
 			}
 				
 				else {
@@ -162,64 +141,48 @@ public class MainActivity extends Activity implements android.view.View.OnClickL
 		}
 	}
 
-	 static void updateDisplay(){
+	private void updateDisplay(){
 		if(starttime != 0){
-			stoptime = System.currentTimeMillis();
-			totaltime = stoptime - starttime;
-			milliseconds = (int) totaltime % 1000;
-			milliseconds = milliseconds/10;
-			seconds = (int) totaltime/1000;
-			minutes = seconds/60;
-			seconds = seconds % 60;
-			hours = minutes/60;
-			minutes = minutes%60;
-			milliseconds = milliseconds/10;
-			time.setTextSize((float) 50d);
 			
-				time.setText(String.format("%02d:%02d:%02d.%d", hours, minutes,seconds,milliseconds));
+			
+			time.setTextSize((float) 50d);
+			time.setText(getTimeString(starttime, System.currentTimeMillis()));
 			
 			
 		}
 		
 	}
 	
-	
-	private void laptime() {
-		// TODO Auto-generated method stub
-		stoptime = System.currentTimeMillis();
-		totaltime = stoptime - starttime;
-		milliseconds = (int) totaltime % 1000;
-		milliseconds = milliseconds/10;
-		seconds = (int) totaltime/1000;
-		minutes = seconds/60;
-		seconds = seconds % 60;
-		hours = minutes/60;
-		minutes = minutes%60;
-		String laptime;
-		if(minutes<1){
-			laptime = String.format("%02d:%02d", seconds,milliseconds);
-		}else{
-		if(hours<1){
-		laptime = String.format("%d:%02d:%02d", minutes,seconds,milliseconds);
-		}else{
-			laptime = String.format("%d:%d:%02d:%02d", hours, minutes,seconds,milliseconds);
-		}
-		}
+	private String getTimeString(long start, long stop){
 		
-		//make a new row
-		TableRow row = new TableRow(this);
-		row.setLayoutParams(new LayoutParams(
-                LayoutParams.FILL_PARENT,
-                LayoutParams.WRAP_CONTENT));
-		//write some text
-		TextView t = new TextView(this);
-		t.setText(laptime);
-		t.setLayoutParams(new LayoutParams(
-                LayoutParams.FILL_PARENT,
-                LayoutParams.WRAP_CONTENT));
-		//add text to row
-		row.addView(t);
-		table.addView(row,new TableLayout.LayoutParams(LayoutParams.WRAP_CONTENT, LayoutParams.WRAP_CONTENT));	
+		long totaltime = stop - start;
+		int milliseconds = (int) totaltime % 1000;
+		milliseconds = milliseconds/10;
+		int seconds = (int) totaltime/1000;
+		int minutes = seconds/60;
+		seconds = seconds % 60;
+		int hours = minutes/60;
+		minutes = minutes%60;
+		milliseconds = milliseconds/10;
+		return String.format("%02d:%02d:%02d.%d", hours, minutes,seconds,milliseconds);
+	}
+	
+	private void newLaptime() {
+		
+		int textsize = 20;
+		
+		long current = System.currentTimeMillis();
+				
+		
+		
+		splits.add(new LapsAndSplits(getTimeString(lastLap, current), getTimeString(starttime, current)));
+		aa.notifyDataSetChanged();
+		lastLap = current;
+		
+		
+		
+		
+			
 		
 		}
 	

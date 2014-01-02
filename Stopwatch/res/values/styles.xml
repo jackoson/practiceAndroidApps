@@ -1,5 +1,16 @@
-<resources>
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
 
     <style name="AppTheme" parent="android:Theme.Light" />
-
+    
+    <style name="text" parent="@android:style/TextAppearance.Medium">
+        
+        <item name="android:textSize">20sp</item>
+       
+        <item name="android:gravity">center</item>
+        
+    </style>
+    
+    
+    
+    
 </resources>
